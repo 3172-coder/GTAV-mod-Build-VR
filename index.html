@@ -127,8 +127,8 @@
   <div class="card">
     <h1>"GTAV Zombieland VR"</h1>
 
-    <button class="btn" onclick="openModal('https://www.youtube.com/embed/AWFaj4IQ4ro?si=6cB-S4Y8wCIz9GlF')">Трейлер</button>
-    <button class="btn" onclick="openModal('https://www.youtube.com/embed/-MD7BOwNpGw" title="Я буду KILLKA - Мэшап by Remaster')">Установка</button>
+    <a class="btn" href="https://youtu.be/AWFaj4IQ4ro" target="_blank">Трейлер</a>
+    <a class="btn" href="https://youtu.be/VIDEO_ID_2" target="_blank">Установка</a>
 
     <div class="links">
       <a href="https://boosty.to/YOUR" target="_blank">Boosty</a>
@@ -138,32 +138,7 @@
     <div class="note">Сборка модов для GTAV "GTAV Zombieland VR" всё в одном by max_remaster</div>
   </div>
 
-  <!-- Модальное окно -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">✖</span>
-      <iframe id="videoFrame" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <script>
-    function openModal(url) {
-      document.getElementById('modal').classList.add('active');
-      // добавляем autoplay и нужные параметры как у embed
-      const fullUrl = url + '?autoplay=1&rel=0';
-      document.getElementById('videoFrame').src = fullUrl;
-    }
-
-    function closeModal() {
-      document.getElementById('modal').classList.remove('active');
-      document.getElementById('videoFrame').src = '';
-    }
-
-    // Закрытие по клику вне видео
-    document.getElementById('modal').addEventListener('click', function(e) {
-      if (e.target === this) closeModal();
-    });
-  </script>
+  
 
 </body>
 </html>
